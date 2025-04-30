@@ -1,0 +1,29 @@
+def cari_ore(text):
+    if "diamond" in text and "gold" in text:
+        return "Diamond dan Gold ditemukan!"
+    elif "diamond" in text:
+        return "Diamond ditemukan!"
+    elif "gold" in text:
+        return "Gold ditemukan!"
+    else:
+        return "Ore tidak ditemukan."
+
+# Fungsi dengan args
+def hitung_block(x, y):
+    return x * y 
+
+# Inner function dan Outer function
+def tambang():
+    def ore_mining():
+        return "Mining ore sedang berlangsung..."
+    return ore_mining()
+
+# Fungsi menggunakan lambda
+cari_ember = lambda item: "Ember ditemukan!" if "ember" in item else "Ember tidak ditemukan"
+
+# Contoh penggunaan fungsi
+text = "Dalam Minecraft, saya menemukan diamond dan gold."
+print(cari_ore(text))  # return value
+print(hitung_block(5, 5))  # args 
+print(tambang())  # inner dan outer function
+print(cari_ember("ember lava"))  # lambda 
